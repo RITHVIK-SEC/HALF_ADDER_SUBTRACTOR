@@ -49,6 +49,32 @@ Figure -02 HALF Subtractor
 
 
 **Program:**
+ADDER
+module fa(a,b,cin,sum,carry);
+
+input a,b,cin;
+
+output sum,carry;
+
+assign sum=( (a ^ b)^cin);
+
+assign carry= ( (a & b)| ( cin &(a ^ b )));
+
+endmodule
+
+SUB
+module fs(a,b,bin,difference,borrow);
+
+input a,b,bin;
+
+output difference,borrow;
+
+assign difference= ( (a ^ b)^bin);
+
+assign borrow= ( ( a & b)| ( bin & ((a ^ b ))));
+
+endmodule
+
 
 /* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
 
@@ -56,6 +82,18 @@ Developed by: RegisterNumber:*/
 
 **RTL Schematic**
 
+![ADDER](https://github.com/user-attachments/assets/907aba87-652f-47ae-812f-5dccec2d095f)
+
+
+
+<img width="756" height="388" alt="Screenshot 2025-10-07 091657" src="https://github.com/user-attachments/assets/2da05ffc-5778-49fc-83bf-d2b533158b40" />
+
+
 **Output/TIMING Waveform**
+<img width="1919" height="1079" alt="Screenshot 2025-10-07 090759" src="https://github.com/user-attachments/assets/01978386-375d-4ef7-bf76-35e241a4f432" />
+<img width="1918" height="1007" alt="Screenshot 2025-10-07 091513" src="https://github.com/user-attachments/assets/ff83cd68-afa0-4641-b3a2-fa44050bffb5" />
+
+
 
 **Result:**
+HENCE VERIFIED
